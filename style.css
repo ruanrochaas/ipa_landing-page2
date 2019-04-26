@@ -1,0 +1,635 @@
+@-webkit-keyframes carregando {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes carregando {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: 'Neuropol-Regular';
+  src: url("./assets/fontes/neuropol.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Nicholson-Gothic-Regular';
+  src: url("./assets/fontes/NicholsonGothic-Regular.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: static;
+}
+
+body .header {
+  position: static;
+  width: 100%;
+  height: 100vh;
+  /* background-color: aquamarine; */
+}
+
+body .header .conteudo {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* background-color: rgb(136, 173, 32); */
+}
+
+body .header .conteudo .container-animacao {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./assets/2.png);
+  background-size: 100%;
+  -webkit-transition: background-image 700ms;
+  transition: background-image 700ms;
+}
+
+body .header .conteudo .mudar-fundo {
+  background-image: url(./assets/1.png);
+  -webkit-transition: background-image 700ms;
+  transition: background-image 700ms;
+}
+
+body .header .conteudo .botao-jogar {
+  position: absolute;
+  bottom: 14%;
+  left: calc(50% - 165px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body .header .conteudo .botao-jogar .botao-link {
+  font-family: 'Neuropol-Regular';
+  font-size: 28px;
+  text-decoration: none;
+  padding: 15px 60px;
+  margin: 20px auto;
+  border-radius: 20px;
+  color: white;
+  background-color: #273981;
+  text-align: center;
+  -webkit-transition: color .5s, background-color .5s;
+  transition: color .5s, background-color .5s;
+}
+
+body .header .conteudo .botao-jogar .hover-bot {
+  font-family: 'Neuropol-Regular';
+  font-size: 28px;
+  text-decoration: none;
+  padding: 15px 60px;
+  margin: 20px auto;
+  border-radius: 20px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  -webkit-transition: color 1s, background-color 1s;
+  transition: color 1s, background-color 1s;
+}
+
+body .header .conteudo .botao-jogar .animacao-botao-gameplay {
+  display: none;
+}
+
+body .header .conteudo h1 {
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  font-family: 'Neuropol-Regular';
+  font-size: 35px;
+  color: black;
+  opacity: 1;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+
+body .header .conteudo .invisivel {
+  opacity: 0;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+
+body .header .conteudo .container-video {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: max-height 100ms;
+  transition: max-height 100ms;
+}
+
+body .header .conteudo .mostrar-video {
+  max-height: 1000px;
+  -webkit-transition: max-height 400ms;
+  transition: max-height 400ms;
+}
+
+body .header .conteudo .container-texto-static {
+  position: absolute;
+  top: 145px;
+  left: calc(50% - 320px);
+  color: #78d43b;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: 'Neuropol-Regular';
+  color: #141414;
+  text-align: center;
+}
+
+body .header .conteudo .container-texto-static img {
+  width: 50%;
+  height: 50%;
+  opacity: 1;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+
+body .header .conteudo .container-texto-static .invisivel {
+  opacity: 0;
+  -webkit-transition: opacity 100ms;
+  transition: opacity 100ms;
+}
+
+body .header .conteudo .container-slideshow-textos {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  overflow: hidden;
+  max-width: 400px;
+  -webkit-transition: ax-width 500ms;
+  transition: ax-width 500ms;
+  overflow: hidden;
+}
+
+body .header .conteudo .slideshow-invisivel {
+  max-width: 0px;
+  -webkit-transition: ax-width 500ms;
+  transition: ax-width 500ms;
+}
+
+body .header .conteudo .navbar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+body .header .conteudo .overlay {
+  z-index: 14;
+  position: absolute;
+  top: 0px;
+  height: 65vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 0px;
+  -webkit-transition: max-height 300ms;
+  transition: max-height 300ms;
+  overflow: hidden;
+}
+
+body .header .conteudo .overlay .card {
+  z-index: 15;
+  color: white;
+  font-family: 'Nicholson-Gothic-Regular';
+  font-size: 25px;
+  text-align: center;
+}
+
+body .header .conteudo .overlay .loader {
+  height: 120px;
+  width: 120px;
+  border: 20px solid transparent;
+  border-right-color: white;
+  border-radius: 50%;
+  -webkit-animation: carregando 2s infinite linear;
+          animation: carregando 2s infinite linear;
+}
+
+body .header .conteudo .overlay .invisivel {
+  display: none;
+}
+
+body .header .conteudo .overlay-aberto {
+  max-height: 600px;
+  -webkit-transition: max-height 300ms;
+  transition: max-height 300ms;
+}
+
+body .header .conteudo .menu {
+  position: absolute;
+  top: 0;
+  height: 65vh;
+  width: 100%;
+  background-color: #0a0a0a;
+  z-index: 10;
+  overflow: hidden;
+  max-height: 0px;
+  -webkit-transition: max-height 400ms;
+  transition: max-height 400ms;
+}
+
+body .header .conteudo .botao-menu {
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 80px;
+  width: 60px;
+  background-color: #1f1f1f;
+  z-index: 15;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .header .conteudo .botao-menu div {
+  height: 27px;
+  width: 2px;
+  background-color: white;
+  margin: 3px;
+}
+
+body .header .conteudo .botao-menu .barra {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+body .header .conteudo .botao-menu .barra-esquerda {
+  -webkit-transform: translate(-20px, -30px) rotate(120deg);
+          transform: translate(-20px, -30px) rotate(120deg);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+body .header .conteudo .botao-menu .barra-esquerda-fechar {
+  -webkit-transform: translate(9px, 0px) rotate(145deg);
+          transform: translate(9px, 0px) rotate(145deg);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+body .header .conteudo .botao-menu .barra-direita {
+  -webkit-transform: translate(20px, -30px) rotate(-120deg);
+          transform: translate(20px, -30px) rotate(-120deg);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+body .header .conteudo .botao-menu .barra-direita-fechar {
+  -webkit-transform: translate(-9px, 0px) rotate(-145deg);
+          transform: translate(-9px, 0px) rotate(-145deg);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+body .header .conteudo .botao-menu .barra-baixo {
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+body .header .conteudo .aberto {
+  max-height: 500px;
+}
+
+body .para-esquerda {
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+  opacity: 0;
+  -webkit-transition: opacity 200ms, -webkit-transform 500ms;
+  transition: opacity 200ms, -webkit-transform 500ms;
+  transition: transform 500ms, opacity 200ms;
+  transition: transform 500ms, opacity 200ms, -webkit-transform 500ms;
+}
+
+body .para-direita {
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px);
+  opacity: 0;
+  -webkit-transition: opacity 200ms, -webkit-transform 500ms;
+  transition: opacity 200ms, -webkit-transform 500ms;
+  transition: transform 500ms, opacity 200ms;
+  transition: transform 500ms, opacity 200ms, -webkit-transform 500ms;
+}
+
+body .centro {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  -webkit-transition: opacity 200ms, -webkit-transform 500ms;
+  transition: opacity 200ms, -webkit-transform 500ms;
+  transition: transform 500ms, opacity 200ms;
+  transition: transform 500ms, opacity 200ms, -webkit-transform 500ms;
+}
+
+.container-slideshow-textos .container-botoes {
+  width: 90px;
+  height: 40px;
+  overflow: hidden;
+  border-bottom: 1px solid white;
+}
+
+.container-slideshow-textos .container-botoes .botao-passa-texto {
+  width: 50%;
+  height: 100%;
+  float: left;
+  cursor: pointer;
+  border: none;
+  background-color: #0a0a0a;
+  color: white;
+  font-weight: 500;
+  -webkit-transition: background-color 400ms, color 400ms;
+  transition: background-color 400ms, color 400ms;
+}
+
+.container-slideshow-textos .container-botoes .botao-passa-texto:hover {
+  background-color: #3f3f3f;
+  color: white;
+  font-weight: bold;
+}
+
+.container-slideshow-textos .container-textos {
+  width: 350px;
+  height: 200px;
+  background-color: #0a0a0a;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-slideshow-textos .container-textos .centralizador {
+  width: 300px;
+  height: 130px;
+  margin: auto;
+}
+
+.container-slideshow-textos .container-textos .centralizador ul {
+  list-style-type: none;
+  position: relative;
+}
+
+.container-slideshow-textos .container-textos .centralizador ul li {
+  position: absolute;
+}
+
+.container-slideshow-textos .container-textos .centralizador ul li .texto-titulo {
+  font-family: 'Neuropol-Regular';
+  font-size: 15px;
+}
+
+.container-slideshow-textos .container-textos .centralizador ul li .conteudo-texto {
+  font-family: 'Nicholson-Gothic-Regular';
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.navbar {
+  height: 80px;
+  width: 100%;
+}
+
+.navbar .espaco-botao-menu {
+  height: 80px;
+  width: 60px;
+  float: right;
+  background-color: cadetblue;
+}
+
+.navbar ul {
+  height: 100%;
+  list-style-type: none;
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar ul li {
+  cursor: pointer;
+  margin: 5px;
+  color: #0a0a0a;
+  font-family: 'Nicholson-Gothic-Regular';
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 300ms font-weight 300ms;
+  transition: -webkit-transform 300ms font-weight 300ms;
+  transition: transform 300ms font-weight 300ms;
+  transition: transform 300ms font-weight 300ms, -webkit-transform 300ms font-weight 300ms;
+}
+
+.navbar ul li:last-child {
+  margin-right: 20px;
+}
+
+.navbar ul .crescer {
+  font-weight: 600;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 300ms font-weight 300ms;
+  transition: -webkit-transform 300ms font-weight 300ms;
+  transition: transform 300ms font-weight 300ms;
+  transition: transform 300ms font-weight 300ms, -webkit-transform 300ms font-weight 300ms;
+}
+
+.menu .container-lista-menu {
+  float: left;
+  height: 100%;
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu .container-lista-menu ul {
+  list-style-type: none;
+  font-size: 40px;
+  height: 210px;
+  width: 146px;
+}
+
+.menu .container-lista-menu ul li {
+  margin-bottom: 10px;
+  -webkit-transition: opacity 200ms, -webkit-transform 500ms;
+  transition: opacity 200ms, -webkit-transform 500ms;
+  transition: transform 500ms, opacity 200ms;
+  transition: transform 500ms, opacity 200ms, -webkit-transform 500ms;
+  font-family: 'Nicholson-Gothic-Regular';
+  font-size: 35px;
+  font-weight: 200;
+  color: white;
+  cursor: pointer;
+  float: left;
+}
+
+.menu .container-lista-menu ul .crescer {
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition: text-transform 300ms font-weight 300ms;
+  transition: text-transform 300ms font-weight 300ms;
+}
+
+.menu .container-conteudo-iten {
+  float: left;
+  height: 100%;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu .container-conteudo-iten .conteudo {
+  height: 300px;
+  width: 280px;
+  font-family: 'Nicholson-Gothic-Regular';
+  font-size: 18px;
+  font-weight: 200;
+  color: white;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: -webkit-transform 1000;
+  transition: -webkit-transform 1000;
+  transition: transform 1000;
+  transition: transform 1000, -webkit-transform 1000;
+}
+
+.menu .container-conteudo-iten .conteudo form h4:nth-child(2) {
+  margin-top: 20px;
+}
+
+.menu .container-conteudo-iten .conteudo form h4:nth-child(6) {
+  margin-top: 5px;
+}
+
+.menu .container-conteudo-iten .conteudo form input {
+  width: 100%;
+  height: 25px;
+  font-family: 'Nicholson-Gothic-Regular';
+  font-size: 18px;
+}
+
+.menu .container-conteudo-iten .conteudo form small {
+  opacity: 1;
+  font-size: 12px;
+  color: #e9e9e9;
+}
+
+.menu .container-conteudo-iten .conteudo form .invisivel {
+  opacity: 0;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+
+.menu .container-conteudo-iten .conteudo button {
+  display: block;
+  float: left;
+  margin-top: 15px;
+  margin-right: 5px;
+  font-family: 'Nicholson-Gothic-Regular';
+  font-size: 18px;
+  font-weight: 200;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.menu .container-conteudo-iten .conteudo button:nth-child(2):hover {
+  background-color: #273981;
+  border: 2px solid transparent;
+  color: white;
+}
+
+.menu .container-conteudo-iten .conteudo button:nth-child(3):hover {
+  background-color: #313131;
+  border: 2px solid transparent;
+  color: white;
+}
+
+.menu .container-conteudo-iten .cima {
+  -webkit-transform: translateY(-600px);
+          transform: translateY(-600px);
+  -webkit-transition: -webkit-transform 1000;
+  transition: -webkit-transform 1000;
+  transition: transform 1000;
+  transition: transform 1000, -webkit-transform 1000;
+}
+/*# sourceMappingURL=style.css.map */

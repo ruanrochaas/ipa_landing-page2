@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="conteudo">
+            <div class="container-video">
+                <video width="100%" height="100%" id="video" autoplay loop muted>
+                    <source src="./assets/Armature_animtion0_0.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="container-animacao">
+            </div>
+            
+            
+            <div class="botao-jogar animacao-botao-gameplay">
+                <a href="#" class="botao-link">Gameplay</a>
+            </div>
+
+            <h1 class="texto">+ Aventura<br>+ Folclore<br>+ Futuro</h1>
+
+            <div class="navbar">
+                <div class="espaco-botao-menu">
+
+                </div>
+
+                <ul>
+                    <li>VÍDEO</li>
+                    <li>BAIXE</li>
+                    <li>ROTEIRO</li>
+                    <li>CRIADORES</li>
+                </ul>
+            </div>
+
+            <div class="botao-menu">
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+            </div>
+
+            <div class="overlay">
+                <div class="card invisivel">
+                    <h4></h4>
+                </div>
+                <div class="loader invisivel"></div>
+            </div>
+
+            <div class="menu">
+                <div class="container-lista-menu">
+                    <ul>
+                        <li class="para-esquerda invisivel">Vídeo</li>
+                        <li class="para-esquerda invisivel crescer">Baixe</li>
+                        <li class="para-esquerda invisivel">Roteiro</li>
+                        <li class="para-esquerda invisivel">Criadores</li>
+                    </ul>
+                </div>
+                <div class="container-conteudo-iten">
+                    <div class="conteudo cima">
+                        <form id="form1">
+                            <h3>
+                                Cadastre-se para fazer o download.
+                                Fica tranquilo, não leva 2 minutos! =D
+                            </h3>
+                            <h4>Email</h4>
+                            <input type="email"><br>
+                            <small class="invisivel">feedback</small>
+                            <h4>Senha</h4>
+                            <input type="password"><br>
+                            <small class="invisivel">feedback</small><br>
+                        </form>
+                        <button type="submit" form="form1">Enviar</button>
+                        <button type="reset" form="form1">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-texto-static">
+                <img src="./assets/logo2-02.png" alt="logo ipa">
+            </div>
+
+            <div class="container-slideshow-textos">
+                <div class="container-botoes">
+                    <button class="botao-passa-texto" id="botao-texto-esq">&#60</button>
+                    <button class="botao-passa-texto" id="botao-texto-dir">&#62</button>
+                </div>
+                <div class="container-textos">
+                    <div class="centralizador">
+                        <ul>
+                            <li class="centro">
+                                <h3 class="texto-titulo">CASUAL E INSTIGANTE</h3>
+                                <div class="conteudo-texto">
+                                    <p class="texto">O jogo é composto de diversas aventuras. Nelas você pode coletar itens para melhorar a tecnologia do braço mecânico de B2L e desbloquear novas habilidades.</p>
+                                </div>
+                            </li>
+                            <li class="para-direita">
+                                <h3 class="texto-titulo">FOLCLORE?</h3>
+                                <div class="conteudo-texto">
+                                    <p class="texto">Sim, folclore brasilerio!<br>A história do jogo une lendas folclóricas em um futuro distópico onde a Terra está repleta de dispositivos tecnológicos!</p>
+                                </div>
+                            </li>
+                            <li class="para-direita">
+                                <h3 class="texto-titulo">ROBÓTICA NA SAÚDE</h3>
+                                <div class="conteudo-texto">
+                                    <p class="texto">Melhore a tecnologia dos pequeninos robos médicos para recuperar mais vida e receber diversos bônus em habilidades durante o jogo.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <script src="./script.js">
+    </script>
+</body>
+</html>
